@@ -1,0 +1,56 @@
+{
+    "Page": {
+        "prefix": "page",
+        "body": [
+            "import React from \"react\";",
+            "",
+            "const ${1:ComponentName} = () => {",
+            "    return <div>${2:Component}</div>;",
+            "};",
+            "export default ${1:ComponentName}"
+        ],
+        "description": "create default nextjs page"
+    },
+    "function-react-component": {
+        "prefix": "frc",
+        "body": [
+            "export const ${1:ComponentName} = () => {",
+            "\treturn <div>${2:Component}</div>;",
+            "}"
+        ],
+        "description": "React component"
+    },
+    "simple-form": {
+        "prefix": "simple-form",
+        "body": [
+            "<div>",
+            "<label for='name'>Name: </label>",
+            "<input type='text' id='name' name='name' />",
+            "</div>",
+            "<div>",
+            "<label for='text'>Text: </label>",
+            "<input type='text' id='text' name='text' />",
+            "</div>",
+            "<div>",
+            "<label for='rating'>Rating: </label>",
+            "<input type='number' id='rating' name='rating' />",
+            "</div>"
+        ],
+        "description": "Simple Form"
+    },
+    "react-context-with-provider": {
+        "prefix": "rcwp",
+        "body": [
+            "const ${1:ContextName} = React.createContext();",
+            "",
+            "export const use${1:ContextName} = () => {",
+            "return useContext(${1:ContextName});",
+            "};",
+            "",
+            "export const ${1:ContextName}Provider = ({ children }) => {",
+            "return <${1:ContextName}.Provider>{children}</${1:ContextName}.Provider>;",
+            "};"
+        ],
+        "description": "Context"
+    }
+}
